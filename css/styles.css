@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  outline: none;
+  font-size: 17px;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+body {
+  background-color: #f1f8ff;
+}
+.caixa {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #33333342;
+}
+#botao {
+  padding: 15px;
+  border: none;
+  background-color: #0095ff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+#email,
+#senha {
+  padding: 15px;
+  border: 1px solid #33333334;
+  border-radius: 5px;
+  width: 340px;
+  box-shadow: 0px 0px 5px inset #3333333d;
+}
+.grupo-formulario {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+::placeholder {
+  opacity: 0.5;
+}
+label {
+  margin-bottom: 5px;
+}
+.caixa h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 25px;
+  color: #0095ff;
+}
+hr {
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid #3333332f;
+}
+#email-erro-mensagem,
+#senha-erro-mensagem {
+  margin-top: 5px;
+  color: red;
+  display: none;
+}
+#erro-email-senha-incorretos {
+  display: none;
+  color: red;
+  background-color: #ff00001f;
+  border: 1px solid #ff00007c;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 25px;
+}
+#sucesso-login {
+  color: #008d00;
+  background-color: #00b1002c;
+  border: 1px solid #008d00;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 25px;
+  display: none;
+}
+@media (max-width: 415px) {
+  .container {
+    padding: 20px;
+  }
+  .caixa,
+  #email,
+  #senha {
+    width: 100%;
+  }
+}
+@media (max-width: 295px) {
+  #titulo-acesso {
+    font-size: 20px;
+  }
+}
+
+#exibir {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  box-shadow: 0px 0px 5px #33333342;
+  border-radius: 5px;
+  max-width: 500px;
+  width: calc(100% - 40px);
+  padding: 20px;
+}
+#exibir h1,
+#exibir p {
+  margin-bottom: 10px;
+  color: #333;
+}
+#exibir p {
+  line-height: 25px;
+}
+.botao-container {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-top: 20px;
+}
+#exibir button {
+  background-color: #0095ff;
+  border: none;
+  color: white;
+  padding: 10px;
+  width: 80px;
+  border-radius: 50px;
+  border: 2px solid;
+  cursor: pointer;
+  transition: 0.2s;
+  outline: 3px solid white;
+}
+#exibir button:hover {
+  outline: 3px solid #0095ff;
+}
+#exibir-container {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  background-color: #414c4f42;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(3px);
+}
